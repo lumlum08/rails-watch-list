@@ -1,0 +1,14 @@
+<h1>
+  <strong><%= @list.name %></strong>
+</h1>
+
+<% @list.movies.each do |movie|  %>
+<div class="card-product">
+<%# <%= image_tag movie.poster_url, width: 50, height: 50 %>
+  <div class="card-product-infos">
+    <h2><%= movie.title %> - <%= movie.rating %>% </h2>
+    <p> <%= movie.overview  %></p>
+    <p> <%= @bookmark.comment%></p>
+  </div>
+</div>
+<% end %>
